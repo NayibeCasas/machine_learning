@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="{{url_for('static',filename='./CSS/estilo.css')}}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tallas</title>
+</head>
+
+<body>
+
+    <section class="principal">
+        <section class="tabla">
+            <img src="{{url_for('static',filename='./Images/mujer.png')}}" alt="">
+            <h1>Conoce tu talla de blusa segun tus medidas</h1>
+            <table>
+                <tr>
+                    <td>Caracteiristica</td>
+                    <td>Minimo</td>
+                    <td>Maximo</td>
+                </tr>
+                <tr>
+                    <td>Chest(cm)</td>
+                    <td>91</td>
+                    <td>138</td>
+                </tr>
+                <tr>
+                    <td>Front Length(cm)</td>
+                    <td>67</td>
+                    <td>102</td>
+                </tr>
+                <tr>
+                    <td>Across Shoulder(cm)</td>
+                    <td>40</td>
+                    <td>56</td>
+                </tr>
+            </table>
+        </section>
+        <form action="/enviarDatos" method="post">
+            <label for="">
+                <span>Chest(cm)</span>
+                <input type="number" name="chest" id="chest" required>
+            </label>
+            <label for="">
+                <span>Front Length(cm)</span>
+                <input type="number" name="front" id="front" required>
+            </label>
+            <label for="">
+                <span>Across Shoulder(cm)</span>
+                <input type="number" name="across" id="across" required>
+            </label>
+            <input type="submit" value="Obtener Talla" id="enviar">
+            <p id="error"></p>
+            <p id="error2"></p>
+            <p id="error3"></p>
+        </form>
+
+    </section>
+    </section>
+    <script src="./index.js"></script>
+
+</body>
+
+</html>
